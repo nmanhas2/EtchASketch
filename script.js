@@ -76,7 +76,6 @@ function GenerateGrid(){
 
             column.classList.add("grid_column");
             column.id = `row_${i}_column${j}`;
-            column.style.border = "2px solid black"
             column.style.height = `${column_height}px`
             column.style.width = `${column_width}px`
             column.style.boxSizing = "border-box";

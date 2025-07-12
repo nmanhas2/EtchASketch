@@ -32,9 +32,10 @@ html, body{
 .grid_container {
     display: flex;
     flex-direction: column;
-    width: min(90vw, 640px);
-    height: min(90vw, 640px); /* keeps it square */
+    width: min(90vw, 500px);
+    height: min(90vw, 500px); /* keeps it square */
     background-color: white;
+    border: 1px solid #361134;
 }
 
 .container{
