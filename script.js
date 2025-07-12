@@ -45,7 +45,7 @@ grid_color_mode.addEventListener("click", () => {
 });
 
 function GetRandomColor() {
-  // Generate a random hex color
+
   const letters = "0123456789ABCDEF";
   let color = "#";
   for(let i = 0; i < 6; i++){
@@ -91,6 +91,9 @@ function GenerateGrid(){
 function SetGridSize(){
     NUM_GRID_COLUMNS = grid_size.value;
     NUM_GRID_ROWS = grid_size.value;
+
+    const grid_size_label = document.querySelector("#grid_size_label");
+    grid_size_label.textContent = `Grid Size: ${NUM_GRID_ROWS}x${NUM_GRID_COLUMNS}`;
 
     GenerateGrid();
 }

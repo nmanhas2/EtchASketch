@@ -1,7 +1,26 @@
-body{
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background-color: #F391A0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+h1{
+    margin: 50px;
+    font-size: 56px;
+    color: #AB2189;
+}
+
+.grid_row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1;
 }
 
 html, body{
@@ -10,36 +29,66 @@ html, body{
     padding: 0;  
 }
 
-.grid_container{
+.grid_container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 640px;
-    height: 640px;
+    width: min(90vw, 640px);
+    height: min(90vw, 640px); /* keeps it square */
+    background-color: white;
 }
 
 .container{
     display: flex;
 }
 
-.grid_options{
+.grid_options {
     display: flex;
-    margin: 10px;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 10px;
+    max-width: 90vw;
 }
 
-#grid_color_mode{
+button{
     width: 60px;
     height: 40px;
     margin-bottom: 20px;
     padding: 5px;
     text-align: center;
-    border: none;
+    border: solid 2px #361134;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #361134;
 }
 
-#grid_color_mode:hover{
-    background-color: aliceblue;
+button:hover{
+    background-color: #EA3788;
+    cursor: pointer;
+}
+
+#grid_size_label{
+    font-size: 20px;
+    font-weight: bold;
+    color: #AB2189;
+    margin-right: 10px;
+}
+
+#grid_size{
+    border-radius: 5px;
+    height: 10px;
+    width: 100%;
+    max-width: 200px;
+    margin-right: 10px;
+    background: transparent;
+    accent-color: #EA3788;
+}
+
+#grid_size::-webkit-slider-thumb {
+    cursor: pointer;
+    
+}
+
+#grid_size::-webkit-slider-runnable-track {
+  background: #361134;
+  border-radius: 4px;
 }
